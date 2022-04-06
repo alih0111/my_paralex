@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 4300px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      #app {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .fixed-section {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      .title {
+        font-size: 30px;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%, -50%), scale(1);
+      }
+      .background,
+      .middleground,
+      .foreground {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .bg-block {
+        background: #c3af9d;
+        position: absolute;
+        bottom: -10vh;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        transform: skewY(-2deg);
+      }
+      .mg-block {
+        background: #ab805c;
+        position: absolute;
+        bottom: -65vh;
+        left: -10vw;
+        width: 100%;
+        height: 60vh;
+        transform: skewY(40deg);
+      }
+      .fg-block {
+        background: #6d5a44;
+        position: absolute;
+        bottom: -45vh;
+        left: 0;
+        width: 100%;
+        height: 60vh;
+        transform: skewY(-20deg);
+      }
+      .second_page {
+        background: #cabaad;
+      }
+      .second_page .title {
+        font-size: 30px;
+        position: absolute;
+        left: 35%;
+        top: 50%;
+        transform: translate(-50%, -50%), scale(1);
+      }
+      .second_page h1 {
+        color: #fdeabf;
+        transform: scale(1.35);
+      }
+      .second_page h1 span {
+        display: inline-block;
+      }
+      .third_page .title h2 {
+        color: #c2c2c2;
+      }
+      .third_page .imgs {
+        margin: 100px 0;
+        position: relative;
+      }
+      .third_page {
+        transform: translate3d(0, 100vh, 0);
+        background: #231f20;
+        padding-top: 50px;
+      }
+      .third_page .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+      }
+      .turtlemascot {
+        position: absolute;
+        width: 40vw;
+        left: 32vw;
+        bottom: 17vw;
+        transform: scale(0);
+      }
+
+      .bottom-sect {
+        height: 1000px;
+      }
+
+      /* .progress-line {
+        position: absolute;
+        width: 2px;
+        background: red;
+        height: 100%;
+        left: 5vw;
+        top: 0;
+        transform: translate3d(0, -100%, 0);
+        z-index: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="first-page fixed-section">
+        <h1 class="title">welcom</h1>
+        <div class="background">
+          <div class="bg-block"></div>
+        </div>
+        <div class="foreground">
+          <div class="mg-block"></div>
+        </div>
+        <div class="middleground">
+          <div class="fg-block"></div>
+        </div>
+      </div>
+      <div class="second_page fixed-section">
+        <h1 class="title">
+          <span>7</span>
+          <span>Learn</span>
+          <span>Jacascript</span>
+        </h1>
+        <img src="" alt="" />
+      </div>
+      <div class="third_page fixed-section">
+        <div class="progress-line"></div>
+
+        <div class="title">
+          <h2>Hello Parallax</h2>
+        </div>
+
+        <div class="imgs">
+          <img
+            class="img img1"
+            src="https://placekitten.com/g/400/400"
+            alt=""
+          />
+          <img
+            class="img img2"
+            src="https://placekitten.com/g/400/500"
+            alt=""
+          />
+        </div>
+
+        <div class="bottom-sect"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
